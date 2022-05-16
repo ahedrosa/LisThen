@@ -83,17 +83,27 @@ class RegisterController extends Controller
     
     public function register(Request $request)
     {
-        $this->validator($request->all())->validate();
-
-        event(new Registered($user = $this->create($request->all())));
-
-        //usuario que se registra no se loguea
-        //$this->guard()->login($user);
-        $request->session()->put('registered', true);
-        
-        $data['modal'] = true;
-        
-        return redirect('/')->with($data);
+        // try{
+    
+            $this->validator($request->all())->validate();
+            
+            event(new Registered($user = $this->create($request->all())));
+    
+            //usuario que se registra no se loguea
+            //$this->guard()->login($user);
+            $request->session()->put('registered', true);
+            
+            $data['login-modal'] = true;
+            
+            return redirect('/')->with($data);
+            
+        // }catch(\Exception $e){
+            
+        //     $data['register-modal'] = true;
+            
+        //     $this->validator($request->all())->validate();
+        //     return back()->with($data);
+        // }
 
     }
 }

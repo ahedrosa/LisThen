@@ -12,12 +12,12 @@
     <title>Listhen App - Online Music Streaming App</title>
     <base href="{{url('/')}}/" >
     <link href="{{url ('/assets/images/logos/favicon.png') }}') }}')}}" rel="icon">
-    <link rel="apple-touch-icon" href="{{url ('/assets/admin/images/logos/touch-icon-iphone.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{url ('/assets/admin/images/logos/touch-icon-ipad.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{url ('/assets/admin/images/logos/touch-icon-iphone-retina.png') }}">
-    <link rel="apple-touch-icon" sizes="167x167" href="{{url ('/assets/admin/images/logos/touch-icon-ipad-retina.png') }}">
-    <link href="{{url ('/assets/admin/css/vendors.bundle.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{url ('/assets/admin/css/styles.bundle.css') }}" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" href="{{url ('/assets/images/logos/touch-icon-iphone.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{url ('/assets/images/logos/touch-icon-ipad.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url ('/assets/images/logos/touch-icon-iphone-retina.png') }}">
+    <link rel="apple-touch-icon" sizes="167x167" href="{{url ('/assets/images/logos/touch-icon-ipad-retina.png') }}">
+    <link href="{{url ('/assets/css/vendors.bundle.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{url ('/assets/css/styles.bundle.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
     
@@ -123,7 +123,7 @@
                 <div class="row h-100">
                     <div class="col-lg-3 pb-4">
                         <div class="h-100 event event-v bg-img bg-img-radius-lg"
-                            style="background-image: url('{{url ('/assets/admin/images/background/vertical/1.jpg') }}')">
+                            style="background-image: url('{{url ('/assets/images/background/vertical/1.jpg') }}')">
                             <div class="event-content p-4"><a href="#">
                                     <h6>New Year Party</h6>
                                 </a><span class="countdown mb-3"></span> <a href="#"
@@ -133,7 +133,7 @@
                     <div class="col-lg-6">
                         <div class="h-50 pb-4">
                             <div class="h-100 event event-h bg-img bg-img-radius-lg"
-                                style="background-image: url('{{url ('/assets/admin/images/background/horizontal/1.jpg') }}')">
+                                style="background-image: url('{{url ('/assets/images/background/horizontal/1.jpg') }}')">
                                 <div class="event-content p-4"><a href="#">
                                         <h6>Dance with DJ Nowan</h6>
                                     </a>
@@ -144,7 +144,7 @@
                         </div>
                         <div class="h-50 pb-4">
                             <div class="h-100 event event-h bg-img bg-img-radius-lg"
-                                style="background-image: url('{{url ('/assets/admin/images/background/horizontal/2.jpg') }}')">
+                                style="background-image: url('{{url ('/assets/images/background/horizontal/2.jpg') }}')">
                                 <div class="event-content p-4">
                                     <a href="#">
                                         <h6>Move You's Legs</h6>
@@ -158,7 +158,7 @@
                     </div>
                     <div class="col-lg-3 pb-4">
                         <div class="h-100 event event-v bg-img bg-img-radius-lg"
-                            style="background-image: url('{{url ('/assets/admin/images/background/vertical/1.jpg') }}')">
+                            style="background-image: url('{{url ('/assets/images/background/vertical/1.jpg') }}')">
                             <div class="event-content p-4">
                                 <a href="#"> <h6>New Year Party</h6> </a>
                                 <span class="countdown mb-3"></span> 
@@ -181,32 +181,32 @@
                         <div class="carousel-item-6">
                             <div class="text-center">
                                 <div class="avatar avatar-xl avatar-circle mx-auto"><img
-                                        src="{{url ('/assets/admin/images/cover/large/1.jpg') }}" alt="Arebica Luna"></div>
+                                        src="{{url ('/assets/images/cover/large/1.jpg') }}" alt="Arebica Luna"></div>
                                 <h6 class="mb-0 mt-2">Arebica Luna</h6>
                             </div>
                             <div class="text-center">
                                 <div class="avatar avatar-xl avatar-circle mx-auto"><img
-                                        src="{{url ('/assets/admin/images/cover/large/2.jpg') }}" alt="Gerrina Linda"></div>
+                                        src="{{url ('/assets/images/cover/large/2.jpg') }}" alt="Gerrina Linda"></div>
                                 <h6 class="mb-0 mt-2">Gerrina Linda</h6>
                             </div>
                             <div class="text-center">
                                 <div class="avatar avatar-xl avatar-circle mx-auto"><img
-                                        src="{{url ('/assets/admin/images/cover/large/3.jpg') }}" alt="Arebica Luna"></div>
+                                        src="{{url ('/assets/images/cover/large/3.jpg') }}" alt="Arebica Luna"></div>
                                 <h6 class="mb-0 mt-2">Zunira Willy</h6>
                             </div>
                             <div class="text-center">
                                 <div class="avatar avatar-xl avatar-circle mx-auto"><img
-                                        src="{{url ('/assets/admin/images/cover/large/4.jpg') }}" alt="Johnny Marro"></div>
+                                        src="{{url ('/assets/images/cover/large/4.jpg') }}" alt="Johnny Marro"></div>
                                 <h6 class="mb-0 mt-2">Johnny Marro</h6>
                             </div>
                             <div class="text-center">
                                 <div class="avatar avatar-xl avatar-circle mx-auto"><img
-                                        src="{{url ('/assets/admin/images/cover/large/5.jpg') }}" alt="Jina Moore"></div>
+                                        src="{{url ('/assets/images/cover/large/5.jpg') }}" alt="Jina Moore"></div>
                                 <h6 class="mb-0 mt-2">Jina Moore</h6>
                             </div>
                             <div class="text-center">
                                 <div class="avatar avatar-xl avatar-circle mx-auto"><img
-                                        src="{{url ('/assets/admin/images/cover/large/6.jpg') }}" alt="Rasomi Pelina"></div>
+                                        src="{{url ('/assets/images/cover/large/6.jpg') }}" alt="Rasomi Pelina"></div>
                                 <h6 class="mb-0 mt-2">Rasomi Pelina</h6>
                             </div>
                         </div>
@@ -238,58 +238,20 @@
     
     @include('auth.register')
     
-    
-    
-    
-    
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
+    @include('layouts.user.logout')
     
     
     <div class="backdrop header-backdrop"></div>
     <div class="backdrop sidebar-backdrop"></div>
-    <script src="{{url ('/assets/admin/js/vendors.bundle.js') }}"></script>
-    <script src="{{url ('/assets/admin/js/scripts.bundle.js') }}"></script>
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    {{-- $modal=true --}}
+    <script src="{{url ('/assets/js/vendors.bundle.js') }}"></script>
+    <script src="{{url ('/assets/js/scripts.bundle.js') }}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
-    {{-- Session::put('modal_login',$modal) --}}
-    {{-- dd(session()) --}}
-    @if(Session::has('modal'))
-        <script type="text/javascript" >
-        
-            jQuery(document).ready(function($) {
-                $( document ).ready(function() {
-                    $('#signIn').modal('toggle');
-                });
-            });   
-        </script>
-    @elseif(Session::has('errors'))        
+    
+    @if(Session::has('errors'))
+    
+        @if (Session::has('register-modal'))
         <script type="text/javascript" >
         
             jQuery(document).ready(function($) {
@@ -299,7 +261,30 @@
             });   
             
         </script>
+        @else
+            <script type="text/javascript" >
+            
+                jQuery(document).ready(function($) {
+                    $( document ).ready(function() {
+                        $('#signIn').modal('toggle');
+                    });
+                });   
+            </script>
+        @endif
+        
+    @elseif(Session::has('login-modal'))
+    
+        <script type="text/javascript" >
+        
+            jQuery(document).ready(function($) {
+                $( document ).ready(function() {
+                    $('#signIn').modal('toggle');
+                });
+            });   
+        </script>
     @endif
+    
+    {{-- dd(session()) --}}
     
     <!--  RouteServiceProvider   -->
 </body>
