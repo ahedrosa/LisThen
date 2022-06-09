@@ -12,7 +12,7 @@ class Genre extends Model
     protected $table = 'genre';
     
     
-    protected $filable = [
+    protected $fillable = [
         'name'
         ];
         

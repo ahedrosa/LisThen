@@ -247,47 +247,29 @@
     
     <div class="backdrop header-backdrop"></div>
     <div class="backdrop sidebar-backdrop"></div>
-    <script defer src="{{url ('/assets/js/vendors.bundle.js') }}"></script>
-    <script defer src="{{url ('/assets/js/scripts.bundle.js') }}"></script>
-    <script  defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="{{url ('/assets/js/vendors.bundle.js') }}"></script>
+    <script src="{{url ('/assets/js/scripts.bundle.js') }}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     
     @if(Session::has('errors'))
-    
-        @if (Session::has('register-modal'))
         <script type="text/javascript" >
-        
+        @if ($register === true)
             jQuery(document).ready(function($) {
                 $( document ).ready(function() {
                     $('#register').modal('toggle');
                 });
-            });   
-            
-        </script>
+            });
         @else
-            <script type="text/javascript" >
-            
-                jQuery(document).ready(function($) {
-                    $( document ).ready(function() {
-                        $('#signIn').modal('toggle');
-                    });
-                });   
-            </script>
-        @endif
-        
-    @elseif(Session::has('login-modal'))
-    
-        <script type="text/javascript" >
-        
             jQuery(document).ready(function($) {
                 $( document ).ready(function() {
                     $('#signIn').modal('toggle');
                 });
-            });   
+            });
+        @endif
         </script>
     @endif
-    
     {{-- dd(session()) --}}
     
     <!--  RouteServiceProvider   -->

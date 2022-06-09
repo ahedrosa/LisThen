@@ -1,5 +1,28 @@
-
-
-ion-icon{
+ion-icon {
     margin-bottom: -0.25rem !important;
+}
+
+.flechas svg {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.flechas nav .justify-between {
+    display: none;
+}
+
+.flechas nav .hidden div {
+    margin: 10px;
+}
+
+th {
+    color: #fff;
+}
+
+table a {
+    color: #45c8f1;
+}
+
+table a:hover {
+    color:#00ff4e;
 }

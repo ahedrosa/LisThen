@@ -15,7 +15,7 @@ class Song extends Model
         'duration'=> 'datetime:H:i:s',
         ];
     
-    protected $filable = [
+    protected $fillable = [
         'name',
         'duration',
         'listens',

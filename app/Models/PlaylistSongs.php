@@ -12,7 +12,7 @@ class PlaylistSongs extends Model
     protected $table = 'playlist_songs';
     
     
-    protected $filable = [
+    protected $fillable = [
         'playlist_id',
         'song_id'
         ];

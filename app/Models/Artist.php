@@ -12,9 +12,8 @@ class Artist extends Model
     protected $table = 'artist';
     
     
-    protected $filable = [
-        'name',
-        'origin'
+    protected $fillable = [
+        'name'
         ];
         
     public function songs(){

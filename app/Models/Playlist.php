@@ -11,7 +11,7 @@ class Playlist extends Model
     
     protected $table = 'playlist';
     
-    protected $filable = [
+    protected $fillable = [
         'name',
         'user_id',
         'name',

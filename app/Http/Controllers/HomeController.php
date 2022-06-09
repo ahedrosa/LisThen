@@ -27,7 +27,9 @@ class HomeController extends Controller
         return view('app',['user'=>$user]);
     }
     
-    public function welcome(){
-        return view('welcome');
+    public function welcome(Request $request){
+        $register = $request->session()->get('register');
+        $request->session()->forget('register');
+        return view('welcome', ['register' => $register]);
     }
 }

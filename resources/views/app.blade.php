@@ -7,13 +7,16 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="description" content="Listen App - Online Music Streaming App Template">
 		<meta name="keywords" content="music template, music app, music web app, responsive music app, music, themeforest, html music app template, css3, html5">
+        
         <base href="{{url('/assets')}}/" >
+        
 		<title>Listen App - Online Music Streaming App</title>
 		<link href="../assets/images/logos/favicon.png" rel="icon">
 		<link rel="apple-touch-icon" href="../assets/images/logos/touch-icon-iphone.png">
 		<link rel="apple-touch-icon" sizes="152x152" href="../assets/images/logos/touch-icon-ipad.png">
 		<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logos/touch-icon-iphone-retina.png">
 		<link rel="apple-touch-icon" sizes="167x167" href="../assets/images/logos/touch-icon-ipad-retina.png">
+		<link rel="stylesheet" href="../assets/css/all.min.css">
 		<link href="../assets/css/vendors.bundle.css" rel="stylesheet" type="text/css">
 		<link href="../assets/css/styles.bundle.css" rel="stylesheet" type="text/css">
 		<link href="../assets/css/style.css" rel="stylesheet" type="text/css">
@@ -70,12 +73,12 @@
 					<ul class="navbar-nav" data-scrollable="true">
 						<li class="nav-item nav-header">Browse Music</li>
 						<li class="nav-item"><a href="{{route('home')}}" class="nav-link active"><span ><ion-icon class="h5" name="home-outline"></ion-icon> Home</span></a></li>
-						<li class="nav-item"><a href="#" class="nav-link"><span><ion-icon class="h5" name="musical-notes-outline"></ion-icon> Songs</span></a></li>
+						<li class="nav-item"><a href="{{route('song.index')}}" class="nav-link"><span><ion-icon class="h5" name="musical-notes-outline"></ion-icon> Songs</span></a></li>
 						<li class="nav-item"><a href="{{route('artist.index')}}" class="nav-link"><span><ion-icon class="h5" name="mic-outline"></ion-icon> Artists</span></a></li>
-						<li class="nav-item"><a href="#" class="nav-link"><span><ion-icon class="h5" name="albums-outline"></ion-icon> Albums</span></a></li>
-						<li class="nav-item"><a href="#" class="nav-link"><span><ion-icon class="h5" name="diamond-outline"></ion-icon> Genres</span></a></li>
+						<li class="nav-item"><a href="{{route('album.index')}}" class="nav-link"><span><ion-icon class="h5" name="albums-outline"></ion-icon> Albums</span></a></li>
+						<li class="nav-item"><a href="{{route('genre.index')}}" class="nav-link"><span><ion-icon class="h5" name="diamond-outline"></ion-icon> Genres</span></a></li>
 						<li class="nav-item nav-header">Your Music</li>
-						<li class="nav-item"><a href="#" class="nav-link"><span><ion-icon class="h5" name="list-circle-outline"></ion-icon> Playlists</span></a></li>
+						<li class="nav-item"><a href="{{route('playlist.index')}}" class="nav-link"><span><ion-icon class="h5" name="list-circle-outline"></ion-icon> Playlists</span></a></li>
 						<li class="nav-item"><a href="#" class="nav-link"><span><ion-icon name="add-circle-outline"></ion-icon> Add Playlist</span></a></li>
 						<li class="nav-item"><a href="#" class="nav-link"><span><ion-icon class="h5" name="time-outline"></ion-icon> History</span></a></li>
 					</ul>
@@ -87,139 +90,19 @@
 				<header id="header" class="bg-primary">
 					<div class="d-flex align-items-center">
 						<button type="button" class="btn toggle-menu mr-3" id="openSidebar"><span></span> <span></span> <span></span></button>
-						<form action="#" id="searchForm">
-							<button type="button" class="btn ion-search"><ion-icon class="mb-0" name="search-outline"></ion-icon></button> <input type="text" placeholder="Search..." id="searchInput" class="form-control">
-							<div class="search-card" data-scrollable="true">
-								<div class="mb-3">
-									<div class="d-flex"><span class="text-uppercase mr-auto font-weight-bold text-dark">Artists</span> <a href="#">View All</a></div>
-									<hr>
-									<div class="row">
-										<div class="col-xl-2 col-md-4 col-6">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark">
-													<img src="../assets/images/cover/medium/1.jpg" alt="" class="card-img--radius-md">
-													<p class="text-truncate mt-2">Arebica Luna</p>
-												</a>
-											</div>
-										</div>
-										<div class="col-xl-2 col-md-4 col-6">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark">
-													<img src="../assets/images/cover/medium/2.jpg" alt="" class="card-img--radius-md">
-													<p class="text-truncate mt-2">Gerrina Linda</p>
-												</a>
-											</div>
-										</div>
-										<div class="col-xl-2 col-md-4 col-6">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark">
-													<img src="../assets/images/cover/medium/3.jpg" alt="" class="card-img--radius-md">
-													<p class="text-truncate mt-2">Zunira Willy</p>
-												</a>
-											</div>
-										</div>
-										<div class="col-xl-2 col-md-4 col-6">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark">
-													<img src="../assets/images/cover/medium/4.jpg" alt="" class="card-img--radius-md">
-													<p class="text-truncate mt-2">Johnny Marro</p>
-												</a>
-											</div>
-										</div>
-										<div class="col-xl-2 col-md-4 col-6">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark">
-													<img src="../assets/images/cover/medium/5.jpg" alt="" class="card-img--radius-md">
-													<p class="text-truncate mt-2">Jina Moore</p>
-												</a>
-											</div>
-										</div>
-										<div class="col-xl-2 col-md-4 col-6">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark">
-													<img src="../assets/images/cover/medium/6.jpg" alt="" class="card-img--radius-md">
-													<p class="text-truncate mt-2">Rasomi Pelina</p>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="mb-3">
-									<div class="d-flex"><span class="text-uppercase mr-auto font-weight-bold text-dark">Track</span> <a href="#">View All</a></div>
-									<hr>
-									<div class="row">
-										<div class="col-xl-4 col-md-6 col-12">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark custom-card--inline">
-													<div class="custom-card--inline-img"><img src="../assets/images/cover/small/1.jpg" alt="" class="card-img--radius-sm"></div>
-													<div class="custom-card--inline-desc">
-														<p class="text-truncate mb-0">I Love You Mummy</p>
-														<p class="text-truncate text-muted font-sm">Arebica Luna</p>
-													</div>
-												</a>
-											</div>
-										</div>
-										<div class="col-xl-4 col-md-6 col-12">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark custom-card--inline">
-													<div class="custom-card--inline-img"><img src="../assets/images/cover/small/2.jpg" alt="" class="card-img--radius-sm"></div>
-													<div class="custom-card--inline-desc">
-														<p class="text-truncate mb-0">Shack your butty</p>
-														<p class="text-truncate text-muted font-sm">Gerrina Linda</p>
-													</div>
-												</a>
-											</div>
-										</div>
-										<div class="col-xl-4 col-md-6 col-12">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark custom-card--inline">
-													<div class="custom-card--inline-img"><img src="../assets/images/cover/small/3.jpg" alt="" class="card-img--radius-sm"></div>
-													<div class="custom-card--inline-desc">
-														<p class="text-truncate mb-0">Do it your way(Female)</p>
-														<p class="text-truncate text-muted font-sm">Zunira Willy & Nutty Nina</p>
-													</div>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div>
-									<div class="d-flex"><span class="text-uppercase mr-auto font-weight-bold text-dark">Albums</span> <a href="#">View All</a></div>
-									<hr>
-									<div class="row">
-										<div class="col-xl-4 col-md-6 col-12">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark custom-card--inline">
-													<div class="custom-card--inline-img"><img src="../assets/images/cover/small/4.jpg" alt="" class="card-img--radius-sm"></div>
-													<div class="custom-card--inline-desc">
-														<p class="text-truncate mb-0">Say yes</p>
-													</div>
-												</a>
-											</div>
-										</div>
-										<div class="col-xl-4 col-md-6 col-12">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark custom-card--inline">
-													<div class="custom-card--inline-img"><img src="../assets/images/cover/small/5.jpg" alt="" class="card-img--radius-sm"></div>
-													<div class="custom-card--inline-desc">
-														<p class="text-truncate mb-0">Where is your letter</p>
-													</div>
-												</a>
-											</div>
-										</div>
-										<div class="col-xl-4 col-md-6 col-12">
-											<div class="custom-card mb-3">
-												<a href="#" class="text-dark custom-card--inline">
-													<div class="custom-card--inline-img"><img src="../assets/images/cover/small/6.jpg" alt="" class="card-img--radius-sm"></div>
-													<div class="custom-card--inline-desc">
-														<p class="text-truncate mb-0">Hey not me</p>
-													</div>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+						<form action="{{ $rutaSearch ?? ''}}" method="get" id="searchForm">
+							<button class="btn ion-search" type="submit"><ion-icon class="mb-0" name="search-outline"></ion-icon></button> 
+							
+							<input value="{{ $appendData['search'] ?? '' }}" name="search" type="search" placeholder="Search..."  class="form-control">
+							@isset($appendData)
+                                @foreach($appendData as $name => $value)
+                                    @if($name != 'search')
+                                        <input type="hidden" name="{{$name}}" value="{{$value}}"/>
+                                    @endif    
+                                @endforeach
+	                        @endisset
+	                        
+	                        
 						</form>
 
 						
@@ -1531,8 +1414,10 @@
 		</div>
 		<div class="backdrop header-backdrop"></div>
 		<div class="backdrop sidebar-backdrop"></div>
+		
 		<script defer src="../assets/js/vendors.bundle.js"></script>
 		<script defer src="../assets/js/scripts.bundle.js"></script>
+		<script defer src="../assets/js/delete.js"></script>
 		<script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>

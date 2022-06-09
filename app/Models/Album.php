@@ -11,7 +11,7 @@ class Album extends Model
     
     protected $table = 'album';
     
-    protected $filable = [
+    protected $fillable = [
         'name',
         'type'
         ];
