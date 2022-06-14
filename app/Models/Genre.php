@@ -13,7 +13,7 @@ class Genre extends Model
     
     
     protected $fillable = [
-        'name'
+        'name',
         ];
         
     public function songs(){

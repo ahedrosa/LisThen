@@ -119,7 +119,7 @@ class AlbumController extends Controller
         if($search != null) {
             $album = $album -> where ('id', 'like', '%' . $search . '%')
                                          ->orWhere('name', 'like', '%' . $search . '%')
-                                        // ->orWhere('category', 'like', '%' . $search . '%')
+                                         ->orWhere('type', 'like', '%' . $search . '%')
                                         // ->orWhere('album', 'like', '%' . $search . '%')
                                         // ->orWhere('budget', 'like', '%' . $search . '%')
                                         ;

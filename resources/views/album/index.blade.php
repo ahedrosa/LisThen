@@ -50,6 +50,10 @@
                             <a href="{{ route('album.index', $ordernameasc) }}"><i class="fas fa-sort-alpha-down"></i></a>
                             <a href="{{ route('album.index', $ordernamedesc) }}"><i class="fas fa-sort-alpha-up"></i></a>
                         </th>
+                        <th scope="col">Type
+                            <a href="{{ route('album.index', $ordertypeasc) }}"><i class="fas fa-sort-alpha-down"></i></a>
+                            <a href="{{ route('album.index', $ordertypedesc) }}"><i class="fas fa-sort-alpha-up"></i></a>
+                        </th>
                         <th scope="col"></th>
                         <th scope="col"></th>
                         <th class="plus" scope="col"><a href="{{ url('album/create') }}">Add New<span class="mai-add-circle-outline"></span></a></th>
@@ -63,6 +67,9 @@
                             </td>
                             <td>
                                 {{ $album->name }}
+                            </td>
+                            <td>
+                                {{ $album->type }}
                             </td>
                             <td>
                                 <a href="{{ url('album/' . $album->id) }}">Show</a>

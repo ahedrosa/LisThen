@@ -16,7 +16,7 @@ class CreateAlbumsTable extends Migration
         Schema::create('album', function (Blueprint $table) {
             $table->id();
             $table->string('name',40)->unique;
-            $table->enum('type', ['single','EP','LP'])->default('single');
+            $table->enum('type', ['Single','EP','LP'])->default('Single');
             $table->timestamps();
         });
     }

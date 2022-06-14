@@ -3,7 +3,7 @@
 @section('main')
 
 <div class="container">
-  <h1 class="wow fadeInRight">Album Edit</h1>
+  <h1 class="wow fadeInRight">New Album</h1>
   <h2 class="text-primary wow fadeInRight">{{$album->name}}</h2> <h2 class="wow fadeInRight back"style="float: right;margin-top: -45px;"><a href="{{ url()->previous() }}"><span id="ico" class="mai-arrow-back-circle-outline"></span>Back</a></h2>
    
   @if(Session::has('message'))
@@ -21,7 +21,19 @@
                       <label for="">Name</label>
                       <input class="form-control" value="{{ old('name') }}" type="text" name="name" placeholder="album's name" minlength="1" maxlength="80" required />
                   </div>
+              
+              
+                  <div class="form-group col-md-4">
+                    <label for="">Type</label>
+                      <select class="form-control form-control-lg" name="type">
+                          <option @if( old('type') == 'LP') selected @endif value="LP">LP</option>
+                          <option @if( old('type') == 'EP') selected @endif value="EP">EP</option>
+                          <option @if( old('type') != 'EP' &&  old('type') != 'LP' ) selected @endif value="Single">Single</option>
+                      </select>
+                  </div>
+                
               </div>
+              
               <!--<div class="form-row">-->
                 
               <!--  <div class="input-group col-md-6">-->
@@ -44,7 +56,7 @@
                     
               <div class="form-row">
                 <div class="col-md-4">
-                  <input type="submit" name="btCreate"  type="submit" value="Edit" class="btn btn-primary">
+                  <input type="submit" name="btCreate"  type="submit" value="Create Album" class="btn btn-primary">
                 </div>
               </div>
               

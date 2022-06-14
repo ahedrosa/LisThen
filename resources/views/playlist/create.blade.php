@@ -3,8 +3,8 @@
 @section('main')
 
 <div class="container">
-  <h1 class="wow fadeInRight">Add New Artist</h1>
-  <h2 class="text-primary wow fadeInRight">{{$artist->name}}</h2> <h2 class="wow fadeInRight back"style="float: right;margin-top: -45px;"><a href="{{ url()->previous() }}"><span id="ico" class="mai-arrow-back-circle-outline"></span>Back</a></h2>
+  <h1 class="wow fadeInRight">Add New Playlist</h1>
+  <h2 class="text-primary wow fadeInRight">{{$playlist->name}}</h2> <h2 class="wow fadeInRight back"style="float: right;margin-top: -45px;"><a href="{{ url()->previous() }}"><span id="ico" class="mai-arrow-back-circle-outline"></span>Back</a></h2>
    
   @if(Session::has('message'))
     <div class="alert alert-{{ session()->get('type') }}" role="alert">
@@ -14,13 +14,17 @@
       <div class="page-banner home-banner h-50 mt-4">
         <div class="row flex-wrap-reverse">
 
-          <form class="col-md-11 m-4 mt-5 mb-5 wow fadeInUp" action="{{ url('artist') }}" method="post">
+          <form class="col-md-11 m-4 mt-5 mb-5 wow fadeInUp" action="{{ url('playlist') }}" method="post">
               @csrf
               <div class="form-row">
                   <div class="form-group col-md-4">
                       <label for="">Name</label>
-                      <input class="form-control" value="{{ old('name') }}" type="text" name="name" placeholder="artist's name" minlength="1" maxlength="80" required />
+                      <input class="form-control" value="{{ old('name') }}" type="text" name="name" placeholder="playlist's name" minlength="1" maxlength="80" required />
                   </div>
+                  
+                      <input class="form-control" value="{{ auth()->user()->id }}" hidden type="number" name="user_id" required />
+                  
+              
               </div>
               <!--<div class="form-row">-->
                 
@@ -44,7 +48,7 @@
                     
               <div class="form-row">
                 <div class="col-md-4">
-                  <input type="submit" name="btCreate"  type="submit" value="Create Artist" class="btn btn-primary">
+                  <input type="submit" name="btCreate"  type="submit" value="Create Playlist" class="btn btn-primary">
                 </div>
               </div>
               

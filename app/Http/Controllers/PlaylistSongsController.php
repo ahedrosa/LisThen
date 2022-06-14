@@ -24,7 +24,7 @@ class PlaylistSongsController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -34,8 +34,23 @@ class PlaylistSongsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+       
+        $data = [];
+        $data['message'] = 'New song has been added successfully to your playlist.';
+        $data['type'] = 'success';
+        $playlistSongs = new playlistSongs($request->all());
+        try {
+            $result = $playlistSongs->save();
+        } catch( \Exception $e) {
+            $result = false;
+        }
+        if(!$result) {
+            $data['message'] = 'The song can not be added to the playlist.  '.$e;
+            $data['type'] = 'danger';
+            return back()->withInput()->with($data);
+        }
+        return back()->withInput()->with($data);
     }
 
     /**
@@ -78,8 +93,19 @@ class PlaylistSongsController extends Controller
      * @param  \App\Models\PlaylistSongs  $playlistSongs
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PlaylistSongs $playlistSongs)
+    public function destroy($playlistSong_id)
     {
-        //
+        
+        $data = [];
+        $data['message'] = 'The song has been removed from the playlist.';
+        $data['type'] = 'success';
+        try {
+            $playlistSongs = PlaylistSongs::find( $playlistSong_id );     
+            $playlistSongs->delete();
+        } catch( \Exception $e) {
+            $data['message'] = 'The song has NOT been removed from the playlist';
+            $data['type'] = 'danger';
+        }
+        return back()->withInput()->with($data);
     }
 }

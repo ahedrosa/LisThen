@@ -13,7 +13,7 @@ class Album extends Model
     
     protected $fillable = [
         'name',
-        'type'
+        'type',
         ];
         
     

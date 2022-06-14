@@ -79,11 +79,11 @@
 						<li class="nav-item"><a href="{{route('genre.index')}}" class="nav-link"><span><ion-icon class="h5" name="diamond-outline"></ion-icon> Genres</span></a></li>
 						<li class="nav-item nav-header">Your Music</li>
 						<li class="nav-item"><a href="{{route('playlist.index')}}" class="nav-link"><span><ion-icon class="h5" name="list-circle-outline"></ion-icon> Playlists</span></a></li>
-						<li class="nav-item"><a href="#" class="nav-link"><span><ion-icon name="add-circle-outline"></ion-icon> Add Playlist</span></a></li>
-						<li class="nav-item"><a href="#" class="nav-link"><span><ion-icon class="h5" name="time-outline"></ion-icon> History</span></a></li>
+						<li class="nav-item"><a href="{{route('playlist.create')}}" class="nav-link"><span><ion-icon name="add-circle-outline"></ion-icon> Add Playlist</span></a></li>
+						<!--<li class="nav-item"><a href="#" class="nav-link"><span><ion-icon class="h5" name="time-outline"></ion-icon> History</span></a></li>-->
 					</ul>
 				</nav>
-				<div class="sidebar-footer"><a href="#" class="btn btn-block btn-danger btn-air btn-bold"><i class="ion-md-musical-note"></i> <span>Add Music</span></a></div>
+				<div class="sidebar-footer"><a href="{{route('song.index')}}" class="btn btn-block btn-danger btn-air btn-bold"><i class="ion-md-musical-note"></i> <span>Add Music</span></a></div>
 			</aside>
 			
 			<main id="pageWrapper">

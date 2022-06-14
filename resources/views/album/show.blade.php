@@ -50,12 +50,17 @@
                 </thead>
                 <tbody>
                         <tr>
-                            <th>album's ID</th>
+                            <th>Album's ID</th>
                             <td>{{ $album->id }}</td>
                         </tr>
                         <tr>
                             <th>Name</th>
                             <td>{{ $album->name }}</td>
+                        </tr>
+                        
+                        <tr>
+                            <th>Type</th>
+                            <td>{{ $album->type }}</td>
                         </tr>
                         
                 </tbody>

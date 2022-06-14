@@ -22,7 +22,18 @@
                       <label for="">Name</label>
                       <input class="form-control" value="{{ old('name', $album-> name) }}" type="text" name="name" placeholder="album's name" minlength="1" maxlength="80" required />
                   </div>
+              
+                  <div class="form-group col-md-4">
+                      <label for="">Type</label>
+                        <select class="form-control form-control-lg" name="type">
+                            <option @if($album->type == 'LP') selected @endif value="LP">LP</option>
+                            <option @if($album->type == 'EP') selected @endif value="EP">EP</option>
+                            <option @if($album->type == 'single') selected @endif value="Single">Single</option>
+                        </select>
+                  </div>
+              
               </div>
+              
               <!--<div class="form-row">-->
                 
               <!--  <div class="input-group col-md-6">-->

@@ -21,7 +21,7 @@ class Song extends Model
         'listens',
         'artist_id',
         'album_id',
-        'genre_id'
+        'genre_id',
         ];
     
     public function playlistsongs(){
@@ -38,13 +38,13 @@ class Song extends Model
     
     public function genre(){
         
-        return $this->belongsTo('\App\Models\Artist','genre_id');
+        return $this->belongsTo('\App\Models\Genre','genre_id');
         
     }
     
     public function album(){
         
-        return $this->belongsTo('\App\Models\Artist','album_id');
+        return $this->belongsTo('\App\Models\Album','album_id');
         
     }
     

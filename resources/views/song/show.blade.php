@@ -19,7 +19,7 @@
         <form id="modalDeleteResourceForm" action="" method="post">
             @method('delete')
             @csrf
-            <input type="submit" class="btn btn-primary" value="Delete artist"/>
+            <input type="submit" class="btn btn-primary" value="Delete song"/>
         </form>
       </div>
     </div>
@@ -28,8 +28,8 @@
 
 
 <div class="container">
-  <h1 class=" wow fadeInRight">Artist</h1>
-  <h2 class="text-primary wow fadeInRight">{{$artist->name}}</h2> <h2 class="wow fadeInRight back"style="float: right;margin-top: -45px;"><a href="{{ url()->previous() }}"><span id="ico" class="mai-arrow-back-circle-outline"></span>Back</a></h2>
+  <h1 class=" wow fadeInRight">Song</h1>
+  <h2 class="text-primary wow fadeInRight">{{$song->name}}</h2> <h2 class="wow fadeInRight back"style="float: right;margin-top: -45px;"><a href="{{ url()->previous() }}"><span id="ico" class="mai-arrow-back-circle-outline"></span>Back</a></h2>
   @if(Session::has('message'))
       <div class="alert alert-{{ session()->get('type') }}" role="alert">
           {{ session()->get('message') }}
@@ -50,19 +50,34 @@
                 </thead>
                 <tbody>
                         <tr>
-                            <th>Artist's ID</th>
-                            <td>{{ $artist->id }}</td>
+                            <th>song's ID</th>
+                            <td>{{ $song->id }}</td>
                         </tr>
                         <tr>
                             <th>Name</th>
-                            <td>{{ $artist->name }}</td>
+                            <td>{{ $song->name }}</td>
                         </tr>
-                        
+                        <tr>
+                            <th>Album</th>
+                            <td>{{ $song->album->name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Artist</th>
+                            <td>{{ $song->artist->name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Genre</th>
+                            <td>{{ $song->genre->name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Duration</th>
+                            <td>{{ $song->duration }}</td>
+                        </tr>
                 </tbody>
             </table>
             <div class="col md-3 mt-5">
-                <a class="btn btn-primary" href="{{ url('artist/' . $artist->id . '/edit') }}">Edit</a>
-                <a class="btn btn-primary"href="javascript: void(0);" onclick="deletes('{{ $artist->name }}','{{ url('artist/' . $artist->id) }}')" data-name="{{ $artist->name }}" data-url="{{ url('artist/' . $artist->id) }}" data-toggle="modal" data-target="#modalDelete">Delete</a>
+                <a class="btn btn-primary" href="{{ url('song/' . $song->id . '/edit') }}">Edit</a>
+                <a class="btn btn-primary"href="javascript: void(0);" onclick="deletes('{{ $song->name }}','{{ url('song/' . $song->id) }}')" data-name="{{ $song->name }}" data-url="{{ url('song/' . $song->id) }}" data-toggle="modal" data-target="#modalDelete">Delete</a>
             </div>
               
           </div>
