@@ -19,7 +19,8 @@ Sample Resource Index
 ![image](https://user-images.githubusercontent.com/80273943/174436403-86f49f9e-50ec-48bc-9b85-c42e3dd97171.png)
 
 You can order by any attribute, search, and choose how many results per page you want
-sample: Search by an album name, order by name asc, 20 results per page:
+
+Sample: Search by an album name, order by name asc, 20 results per page:
 ![image](https://user-images.githubusercontent.com/80273943/174436667-409ddde9-3c4b-4d3e-b88c-8a1521efffbf.png)
 
 
